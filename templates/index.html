@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Atividade
+
+{% endblock %}
+
+{% block content %}
+
+<h1>Cursos do IFRN campus Pau dos Ferros</h1>
+<div>
+    {% for curso in lista_curso %}
+        <li> <a href= "{% url 'curso' curso.id %}" > {{curso.titulo }}</a> </li>
+    {% endfor %}    
+</div>
+
+{% endblock %}
